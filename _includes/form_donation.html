@@ -1,0 +1,210 @@
+<form role="form" name="payment_form" id="payment_form">
+    <fieldset>
+        <legend>
+            Contribution
+        </legend>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#monthly" data-toggle="tab">Monthly</a></li>
+  <li><a href="#onetime" data-toggle="tab">One-time</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="monthly">
+        <div class="form-group">
+        <label for="amount_r">Contribution amount</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input class="form-control" type="text" name="amount_r" onclick="select_monthly()" value="" placeholder="Monthly contribution amount">
+                <span class="input-group-addon">.00</span>
+                <input class="form-control" type="hidden" name="frequency" value="r" id="freq_monthly"  >
+            </div>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="day_of_month">
+              <option value="1"  selected>1st </option>
+              <option value="15" >15th</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" name="send_me_gift" value="yes" />  Yes, I am joining the Peacekeepers monthly donor club. 
+              Please send me my copy of <em>Blue Future:  Protecting Water for People and the Planet Forever</em> by Maude Barlow (a $25 value). Offer good until January 30, 2014.
+              <a href="#" data-toggle="modal" data-target="#modal_specialoffer">
+ Find out more. 
+</a>
+          </label>
+          <!--<a rel="popover" data-title="Dynamic" data-content="This button was added dynamically by JavaScript" data-placement="top">popup</a>-->
+     </div>
+    </div>
+    <div class="tab-pane fade" id="onetime">
+        <label for="amount_1">Contribution amount</label>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input class="form-control" type="text" name="amount_1" onclick="select_one_time()" value="" placeholder="One-time contribution amount">
+                <span class="input-group-addon">.00</span>
+            </div>
+            <input class="form-control" type="hidden" name="frequency" value="1" id="freq_one_time">
+        </div>
+    </div>
+</div>
+      
+    </fieldset>
+
+      
+    <fieldset>
+        <legend>
+           Personal information 
+        </legend>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input class="form-control" type="text" name="first_name" value="">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input class="form-control" type="text" name="last_name" value="">
+        </div>
+        <div class="form-group">
+            <label for="organization">Organization</label>
+            <input class="form-control" type="text" name="organization" value=""> 
+            <span class="help-block">(optional)</span>
+        </div>
+        <div class="form-group">
+            <label for="email_addr">Email</label>
+            <input class="form-control" type="email" name="email_addr" size="40" value="" placeholder="Please type your email address" required>
+        </div>
+        <div class="form-group">
+            <label for="email_addr2">Email (type again):</label>
+            <input class="form-control" type="email" name="email_addr2" size="40" value="" placeholder="Please re-type your emal address" required>
+        <div class="form-group">
+            <label for="addr1">Address</label>
+            <textarea class="form-control" type="text" name="addr1" value=""></textarea>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input class="form-control" type="text" name="city" value="">
+        </div>
+        <div class="form-group">
+            <label for="province">Province/State</label>
+            <select class="form-control" name="province"><option value="">(Please choose a province/state)</option>
+          {% include select_provinces.html %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="postal_code">Postal/Zip Code</label>
+              <input class="form-control" type="text" name="postal_code" value="">
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+                <select class="form-control" name="country">
+                {% include select_countries.html %}
+                </select>
+        </div>
+        <div class="form-group">
+            <label for="phone_number">Phone Number</label>
+            <input class="form-control" type="tel" name="phone_number" value=""> (optional)
+        </div>
+ </fieldset>
+ <hr class="soften" />
+    <fieldset>
+        <legend>
+           Payment information 
+        </legend>
+        <div class="form-group">
+            <label for="name_on_card">Name on card</label>
+                <input class="form-control" type="text" name="name_on_card" value=""> 
+        </div>
+        <div class="form-group">
+            <label for="card_number">Card number
+            </label>
+              <input class="form-control" type="number" name="card_number" value="" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" size="19" pattern="[0-9]*" >
+              <input class="form-control" type="hidden" name="cvd" size="3" value=""> 
+              <span class="help-block"><img src="/ui/img/img_mc_visa_22.gif" title="visa and mastercard are accepted" class="" /> We accept VISA and MasterCard. VISA Debit accepted for CIBC cardholrers.</span>
+        </div>
+        <div class="form-group">
+            <label>Card expiry date</label>
+            <br />
+              <label for="exp_month">
+              Month
+                   <select class="form-control" name="exp_month" >
+                       <option value="01">01 - January</option>
+                       <option value="02">02 - February</option>
+                       <option value="03">03 - March</option>
+                       <option value="04">04 - April</option>
+                       <option value="05">05 - May</option>
+                       <option value="06">06 - June</option>
+                       <option value="07">07 - July</option>
+                       <option value="08">08 - August</option>
+                       <option value="09">09 - September</option>
+                       <option value="10">10 - October</option>
+                       <option value="11">11 - November</option>
+                       <option value="12">12 - December</option>
+                   </select>        
+               </label>
+               /
+              <label for="exp_year">
+              Year
+                   <select class="form-control" name="exp_year">
+                       <option value="14">2014</option>
+                       <option value="15">2015</option>
+                       <option value="16">2016</option>
+                       <option value="17">2017</option>
+                       <option value="18">2018</option>
+                       <option value="19">2019</option>
+                       <option value="20">2020</option>
+                       <option value="21">2021</option>
+                       <option value="22">2022</option>
+                   </select> 
+               </label>
+            </div>
+               <div class="form-group">
+                   <label for="billing-different">
+                       <input type="checkbox" id="billing-different"> 
+                       I use a different billing address
+                   </label>
+               </div>
+    </fieldset>
+
+    <fieldset id="billing-information" style="display:none;">
+        <legend>
+           Billing information 
+        </legend>
+                <div class="alert alert-info help-block">
+                  Complete this part only if your contact information is different 
+                  from your billing information.
+                </div>
+        <div class="form-group">
+            <label for="addr1">Address</label>
+            <textarea class="form-control" type="text" name="bill_addr1" value=""></textarea>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input class="form-control" type="text" name="bill_city" value="">
+        </div>
+        <div class="form-group">
+            <label for="province">Province/State</label>
+            <select class="form-control" name="bill_province"><option value="">(Please choose a province/state)</option>
+          {% include select_provinces.html %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="postal_code">Postal/Zip Code</label>
+              <input class="form-control" type="text" name="bill_postal_code" value="">
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+                <select class="form-control" name="bill_country">
+                {% include select_countries.html %}
+                </select>
+        </div>
+    </fieldset>
+    <div class="text-center">
+      <input class="btn btn-lrg btn-success" type="submit" value="Review Donation and Continue &raquo;">
+  </div>
+</form>
+    <hr class="soften" />
+    <p>Ceasefire.ca is a project of The Rideau Institute, a public interest research organization, federally incorporated as a not-for-profit organization with Industry Canada under the Canada Corporations Act. Unfortunately, because of their advocacy work, donations to Ceasefire.ca or the Rideau Institute are not tax deductible.</p>
+
+      <img src="/ui/img/img_beanstream_secure_light.gif" 
+      border="0" alt="Secure Electronic Payment Processing" title="Secure Electronic Payment Processing" />

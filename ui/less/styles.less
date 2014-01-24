@@ -1,0 +1,70 @@
+/* Colour palette */
+
+@background: #EBE9E1;
+@backgroundMedium: #E9E7E0;
+@backgroundMedDark: #E4E2DB;
+@backgroundDark: #262721;
+@logoYellow: #FCD65F;
+@linksYellow: #B79004;
+@whiteNotQuite: #F5F4F0;
+
+
+/* Globals, mixins, etc. */
+
+body {
+    background: @background;
+}
+
+a:link, a:hover, a:visited {
+    color: @backgroundDark;
+}
+
+/* Typography */
+
+/* Layout */
+
+/* Modules */
+
+/* Module: header */
+
+header {
+    background-color: @backgroundDark;
+    h1 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        text-indent: -5000px;
+        height: 80px;
+        background: url('/ui/img/ceasefire-logo-sm.png') no-repeat center;
+    }
+}
+
+/* Module: payment_form */
+
+#payment_form {
+    padding: 10px;
+    background: @whiteNotQuite;
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+        background-color: @whiteNotQuite;
+    }
+    fieldset {
+        legend {
+            background: @backgroundMedium;
+            padding: 0 0 0 5px;
+        }
+    }
+}
+/* Module: Jumbotron */
+.jumbotron {
+    background: url('/ui/img/ceasefire-volunteers.JPG') no-repeat top center;
+    background-size: cover;
+    min-height: 300px;
+    .container {
+        background: rgba(255,255,255,0.7);
+    }
+}
+
+/* State */
+
+/* Print */
+
+/* Media queries */

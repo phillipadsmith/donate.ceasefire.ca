@@ -1,0 +1,50 @@
+/* Colour palette */
+/* Globals, mixins, etc. */
+body {
+  background: #ebe9e1;
+}
+a:link,
+a:hover,
+a:visited {
+  color: #262721;
+}
+/* Typography */
+/* Layout */
+/* Modules */
+/* Module: header */
+header {
+  background-color: #262721;
+}
+header h1 {
+  margin: 0 0 20px 0;
+  padding: 10px 0 0 0;
+  text-indent: -5000px;
+  height: 80px;
+  background: url('/ui/img/ceasefire-logo-sm.png') no-repeat center;
+}
+/* Module: payment_form */
+#payment_form {
+  padding: 10px;
+  background: #f5f4f0;
+}
+#payment_form .nav-tabs > li.active > a,
+#payment_form .nav-tabs > li.active > a:hover,
+#payment_form .nav-tabs > li.active > a:focus {
+  background-color: #f5f4f0;
+}
+#payment_form fieldset legend {
+  background: #e9e7e0;
+  padding: 0 0 0 5px;
+}
+/* Module: Jumbotron */
+.jumbotron {
+  background: url('/ui/img/ceasefire-volunteers.JPG') no-repeat top center;
+  background-size: cover;
+  min-height: 300px;
+}
+.jumbotron .container {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* State */
+/* Print */
+/* Media queries */

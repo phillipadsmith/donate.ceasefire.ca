@@ -1,14 +1,26 @@
 ---
 layout: default
 ---
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <!--<h1>Donate to Ceasefire.ca</h1>-->
-        <!--<p>“A ceasefire is always the first step to achieve peace.”</p>-->
-        <!--<p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <!--<h1>Donate to Ceasefire.ca</h1>-->
+                    <!--<p>“A ceasefire is always the first step to achieve peace.”</p>-->
+                    <!--<p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>-->
+                </div>
+            </div>
+            <div class="col-md-6">
+              <p class="lead">Your support ensures that CeaseFire.ca continues its critical public outreach and advocacy in Canada.</p>
+              <div class="visible-md visible-lg">
+                  <p>Another sentence about the work of CeaseFire.ca that is only shown on larger screens, e.g., Desktop and larger.</p>
+                  <p>Another sentence about the work of CeaseFire.ca that is only shown on larger screens, e.g., Desktop and larger.</p>
+              </div>
+                  <p><a href="#" title="Find out how your contribution will be used" data-toggle="modal" data-target="#modal_about">Find out more about out work &raquo;</a><p>
+            </div>
       </div>
     </div>
-
       {% include form_donation.html %}
       {% include modal_specialoffer.html %}
+      {% include modal_about.html %}

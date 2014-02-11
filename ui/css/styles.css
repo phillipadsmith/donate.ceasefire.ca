@@ -8,6 +8,16 @@ a:hover,
 a:visited {
   color: #262721;
 }
+p a:link,
+p a:hover,
+p a:visited {
+  border-bottom: dotted 1px #262721;
+}
+p a:hover {
+  text-decoration: none;
+  border-bottom: dotted 1px #262721;
+  background: #e4e2db;
+}
 /* Typography */
 /* Layout */
 /* Modules */
@@ -27,14 +37,39 @@ header h1 {
   padding: 10px;
   background: #f5f4f0;
 }
+#payment_form .nav > li > a {
+  padding: 10px 10px;
+}
 #payment_form .nav-tabs > li.active > a,
 #payment_form .nav-tabs > li.active > a:hover,
 #payment_form .nav-tabs > li.active > a:focus {
   background-color: #f5f4f0;
 }
+#payment_form .tab-pane {
+  padding: 20px 0 20px 0;
+}
 #payment_form fieldset legend {
   background: #e9e7e0;
   padding-left: 5px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#payment_form fieldset span.step {
+  background: #b8b3a1;
+  color: #f5f4f0;
+  margin: 0;
+  padding: 0px 8px 0px 8px;
+  margin-right: 4px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+#payment_form fieldset label.control-label {
+  text-transform: uppercase;
+  font-size: smaller;
 }
 #payment_form .nav .nav-tabs {
   margin-top: 20px;
@@ -43,7 +78,8 @@ header h1 {
 .jumbotron {
   background: url('../img/ceasefire-volunteers.JPG') no-repeat top center;
   background-size: cover;
-  min-height: 300px;
+  margin-bottom: 10px;
+  min-height: 180px;
 }
 .jumbotron .container {
   background: rgba(255, 255, 255, 0.7);
@@ -51,3 +87,25 @@ header h1 {
 /* State */
 /* Print */
 /* Media queries */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* portrait tablets */
+  .jumbotron {
+    min-height: 360px;
+  }
+  #payment_form {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust for standard desktop */
+  .jumbotron {
+    min-height: 230px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* Adjust for large desktop */
+  .jumbotron {
+    min-height: 230px;
+  }
+}

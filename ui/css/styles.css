@@ -3,6 +3,9 @@
 body {
   background: #ebe9e1;
 }
+.container {
+  max-width: 800px;
+}
 a:link,
 a:hover,
 a:visited {
@@ -98,10 +101,6 @@ header h1 {
   /* portrait tablets */
   .jumbotron {
     min-height: 360px;
-  }
-  #payment_form {
-    width: 75%;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {

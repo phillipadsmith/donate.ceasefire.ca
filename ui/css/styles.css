@@ -30,7 +30,7 @@ header h1 {
   padding: 0;
   text-indent: -5000px;
   height: 80px;
-  background: url('../img/ceasefire-logo-sm.png') no-repeat center;
+  background: url('../img/ceasefire_logo_sm.png') no-repeat center;
 }
 /* Module: payment_form */
 #payment_form {
@@ -87,6 +87,13 @@ header h1 {
 /* State */
 /* Print */
 /* Media queries */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+  /* Retina-specific stuff here, put your CSS sprite stuff here for Retina */
+  header h1 {
+    background: url('../img/ceasefire_logo_sm_x2.png') no-repeat center;
+    background-size: 320px 80px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* portrait tablets */
   .jumbotron {

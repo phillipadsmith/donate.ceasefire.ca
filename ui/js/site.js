@@ -1,11 +1,19 @@
 $(document).ready(function() {
     $('input[name="card_number"]').payment('formatCardNumber');
-    $('#billing-different').click(function() {
-        $('fieldset#billing-information').toggle();
-    });
 
     $('[rel="popover"]').popover();
 
+
+    // control recurring vs. one-time contributions
+    $('select.frequency').change((function() {
+        var frequency = $("select.frequency option:selected").attr("value");
+        if (frequency === 'onetime') {
+            $('.onetime').toggle();
+            $('.sustaining').toggle();
+        } else {
+            $('.sustaining').toggle();
+        }
+    }));
 
     // override jquery validate plugin defaults
     $.validator.setDefaults({
@@ -25,7 +33,6 @@ $(document).ready(function() {
             }
         }
     });
-
     $("#payment_form").validate({
         debug: true,
         success: "valid",

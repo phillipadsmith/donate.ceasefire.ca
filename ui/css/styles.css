@@ -77,6 +77,14 @@ header h1 {
 #payment_form .nav .nav-tabs {
   margin-top: 20px;
 }
+#payment_form #billing_information {
+  margin-top: 20px;
+}
+a.btn:link,
+a.btn:hover,
+a.btn:visited {
+  color: white;
+}
 /* Module: Jumbotron */
 .jumbotron {
   background: url('../img/ceasefire-volunteers.JPG') no-repeat top center;
@@ -90,7 +98,7 @@ header h1 {
 /* State */
 /* Print */
 /* Media queries */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dppx) {
   /* Retina-specific stuff here, put your CSS sprite stuff here for Retina */
   header h1 {
     background: url('../img/ceasefire_logo_sm_x2.png') no-repeat center;

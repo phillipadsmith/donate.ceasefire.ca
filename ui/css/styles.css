@@ -86,6 +86,9 @@ header h1 {
   margin-bottom: 10px;
   color: #737373;
 }
+#payment_form .joinclub {
+  min-height: 120px;
+}
 a.btn:link,
 a.btn:hover,
 a.btn:visited {

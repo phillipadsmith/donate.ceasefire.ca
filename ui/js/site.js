@@ -7,11 +7,12 @@ $(document).ready(function() {
     // control recurring vs. one-time contributions
     $('select.frequency').change((function() {
         var frequency = $("select.frequency option:selected").attr("value");
+        console.log(frequency);
         if (frequency === 'onetime') {
-            $('.onetime').toggle();
-            $('.sustaining').toggle();
-        } else {
-            $('.sustaining').toggle();
+            $('.onetime').show();
+            $('.sustaining').hide();
+        } else if ($('.sustaining').is(":hidden")) {
+            $('.sustaining').show();
         }
     }));
 

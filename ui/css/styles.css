@@ -80,6 +80,12 @@ header h1 {
 #payment_form #billing_information {
   margin-top: 20px;
 }
+#payment_form .cards-accepted {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
 a.btn:link,
 a.btn:hover,
 a.btn:visited {

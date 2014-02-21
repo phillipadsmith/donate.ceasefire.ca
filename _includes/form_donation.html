@@ -57,9 +57,26 @@
                             <input class="form-control" type="hidden" name="frequency" value="1" id="freq_one_time">
                         </div><!-- /.onetime -->
                         </fieldset>
+                        <fieldset id="personal_information">
+                            <legend>
+                               <span class="step">2</span> Personal information 
+                            </legend>
+                            <div class="form-group">
+                                <label class="control-label" for="first_name">First Name</label>
+                                <input class="form-control" type="text" name="first_name" value="" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="last_name">Last Name</label>
+                                <input class="form-control" type="text" name="last_name" value="" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="email_addr">Email</label>
+                                <input class="form-control" type="email" name="email_addr" size="40" value="" placeholder="Please type your email address" required>
+                            </div>
+                        </fieldset>
                         <fieldset id="billing_information">
                             <legend>
-                                <span class="step">2</span>Billing information 
+                                <span class="step">3</span>Billing information 
                             </legend>
 
                             <div class="form-group">
@@ -72,7 +89,7 @@
                                 </label>
                                 <input class="form-control" type="text" name="card_number" value="" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" size="19" pattern="[0-9]*" required>
                                 <input class="form-control" type="hidden" name="cvd" size="3" value=""> 
-                                <span class="help-block"><img src="ui/img/img_mc_visa_22.gif" title="visa and mastercard are accepted" class="" /> We accept VISA and MasterCard. VISA Debit accepted for CIBC cardholrers.</span>
+                                <span class="cards-accepted"><img src="ui/img/img_mc_visa_22.gif" title="visa and mastercard are accepted" class="" /> We accept VISA and MasterCard. VISA Debit accepted for CIBC cardholrers.</span>
                             </div>
 
                             <div class="form-group">
@@ -112,13 +129,6 @@
                                 </label>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label" for="email_addr">Email</label>
-                                <input class="form-control" type="email" name="email_addr" size="40" value="" placeholder="Please type your email address" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label" for="email_addr2">Email (type again)</label>
-                                <input class="form-control" type="email" name="email_addr2" size="40" value="" placeholder="Please re-type your emal address" required>
                                 <div class="form-group">
                                     <label class="control-label" for="addr1">Billing Address</label>
                                     <textarea class="form-control" type="text" name="addr1" value="" required></textarea>

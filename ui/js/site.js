@@ -10,6 +10,7 @@ $(document).ready(function() {
         console.log(frequency);
         if (frequency === 'onetime') {
             $('.onetime').show();
+            $('input[name="send_me_gift"]').attr("checked", false);
             $('.sustaining').hide();
         } else if ($('.sustaining').is(":hidden")) {
             $('.sustaining').show();
@@ -37,18 +38,14 @@ $(document).ready(function() {
     $("#payment_form").validate({
         debug: true,
         success: "valid",
-        rules: {
-            email_addr: "required",
-            email_addr2: {
-                equalTo: "#email_addr",
-
-            }
-        },
+        rules: {},
         messages: {
-            name: "Please specify your name",
-            email_addr2: {
-                equalTo: "The email addresses must match",
-            }
+            first_name: "Please specify your first name",
+            last_name: "Please specify your last name",
+            email_addr: "Please provide a valid email address",
+            name_on_card: "Please specify the name on the credit card",
+            card_number: "Please provide a valid VISA or MasterCard number",
+            addr1: "Please provide the card's billing address"
         }
     });
 });

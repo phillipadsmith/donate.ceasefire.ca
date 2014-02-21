@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon">$</span>
-                                    <input class="form-control" type="text" name="amount_r" onclick="TODO" value="" placeholder="Sustaining contribution">
+                                    <input class="form-control" type="text" name="amount_r" value="" placeholder="Sustaining contribution">
                                     <span class="input-group-addon">.00</span>
                                     <input class="form-control" type="hidden" name="frequency" value="r" id="freq_monthly">
                                 </div>
@@ -51,7 +51,7 @@
                         <div class="form-group onetime" style="display:none;">
                             <div class="input-group">
                                 <span class="input-group-addon">$</span>
-                                <input class="form-control" type="text" name="amount_1" onclick="TODO" value="" placeholder="One-time contribution amount">
+                                <input class="form-control" type="text" name="amount_1" value="" placeholder="One-time contribution">
                                 <span class="input-group-addon">.00</span>
                             </div>
                             <input class="form-control" type="hidden" name="frequency" value="1" id="freq_one_time">
@@ -176,13 +176,77 @@
                                     <input class="btn btn-lrg btn-success" type="submit" value="Donate Now &raquo;">
                                 </div>
                         </form>
-
-
                     </div>
 
                     <!-- Tab panes: Paypal -->
                     <div class="tab-pane fade" id="paypal">
-                        <p>Paypal options and copy to come...</p>
+                        <div class="form-group">
+                            <select class="form-control frequency_paypal" name="frequency_paypal">
+                                <option value="monthly" selected>Monthly</option>
+                                <option value="onetime">One-time</option>
+                            </select>
+                        </div>
+                        <form class="sustaining_paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <input class="form-control" type="text" name="a3" value="" placeholder="Sustaining contribution">
+                                    <span class="input-group-addon">.00</span>
+                                </div>
+                            </div>
+                            <!-- Identify your business so that you can collect the payments. -->
+                            <input type="hidden" name="business"
+                                value="operations@rideauinstitute.ca">
+
+                            <!-- Specify a Subscribe button. -->
+                            <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                            <!-- Identify the subscription. -->
+                            <input type="hidden" name="item_name" value="Sustaining contribution to CeaseFire.ca">
+                            <input type="hidden" name="item_number" value="">
+
+                            <!-- Set the terms of the regular subscription. -->
+                            <input type="hidden" name="currency_code" value="CAD">
+                            <input type="hidden" name="p3" value="1">
+                            <input type="hidden" name="t3" value="M">
+
+                            <!-- Set recurring payments until canceled. -->
+                            <input type="hidden" name="src" value="1">
+
+                            <!-- Display the payment button. -->
+                                <div class="text-center">
+                                    <input class="btn btn-lrg btn-success" type="submit" value="Donate Now via Paypal &raquo;">
+                                </div>
+                            <img alt="" border="0" width="1" height="1"
+                            src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                        </form>
+
+                        <form class="onetime_paypal" style="display:none;" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <input class="form-control" type="text" name="amount" value="" placeholder="One-time contribution">
+                                    <span class="input-group-addon">.00</span>
+                                </div>
+                            </div>
+                            <!-- Identify your business so that you can collect the payments. -->
+                            <input type="hidden" name="business"
+                                value="operations@rideauinstitute.ca">
+
+                            <!-- Specify a Donate button. -->
+                            <input type="hidden" name="cmd" value="_donations">
+
+                            <!-- Specify details about the contribution -->
+                            <input type="hidden" name="item_name" value="One-time contribution to CeaseFire.ca">
+                            <input type="hidden" name="currency_code" value="CAD">
+
+                            <!-- Display the payment button. -->
+                                <div class="text-center">
+                                    <input class="btn btn-lrg btn-success" type="submit" value="Donate Now via Paypal &raquo;">
+                                </div>
+                            <img alt="" border="0" width="1" height="1"
+                            src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                        </form>
                     </div>
 
                     <!-- Tab panes: Cheque -->

@@ -7,18 +7,30 @@ $(document).ready(function() {
     // control recurring vs. one-time contributions
     $('select.frequency').change((function() {
         var frequency = $("select.frequency option:selected").attr("value");
-        console.log(frequency);
         if (frequency === 'onetime') {
             $('.onetime').show();
             $('input[name="send_me_gift"]').attr("checked", false);
             $('.sustaining').hide();
         } else if ($('.sustaining').is(":hidden")) {
             $('.sustaining').show();
+            $('.onetime').hide();
+        }
+    }));
+    $('select.frequency_paypal').change((function() {
+        var frequency = $("select.frequency_paypal option:selected").attr("value");
+        if (frequency === 'onetime') {
+            $('.onetime_paypal').show();
+            //$('input[name="send_me_gift"]').attr("checked", false);
+            $('.sustaining_paypal').hide();
+        } else if ($('.sustaining_paypal').is(":hidden")) {
+            $('.sustaining_paypal').show();
+            $('.onetime_paypal').hide();
         }
     }));
 
     // override jquery validate plugin defaults
-    $.validator.setDefaults({
+    $.validator.setDefaults({});
+    $("#payment_form").validate({
         highlight: function(element) {
             $(element).closest('.form-group').addClass('has-error');
         },
@@ -33,12 +45,9 @@ $(document).ready(function() {
             } else {
                 error.insertAfter(element);
             }
-        }
-    });
-    $("#payment_form").validate({
+        },
         debug: true,
         success: "valid",
-        rules: {},
         messages: {
             first_name: "Please specify your first name",
             last_name: "Please specify your last name",

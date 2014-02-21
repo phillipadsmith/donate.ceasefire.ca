@@ -329,6 +329,7 @@ $.extend($.validator, {
 			function delegate(event) {
 				var validator = $.data(this[0].form, "validator"),
 					eventType = "on" + event.type.replace(/^validate/, "");
+                                if (!validator) return; //on line 332, https://github.com/jzaefferer/jquery-validation/issues/476#issuecomment-29105792
 				if ( validator.settings[eventType] ) {
 					validator.settings[eventType].call(validator, this[0], event);
 				}

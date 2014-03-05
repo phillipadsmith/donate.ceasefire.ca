@@ -106,6 +106,18 @@ a.btn:visited {
 .jumbotron .container {
   background: rgba(255, 255, 255, 0.7);
 }
+/* Module: Scrolling list of donors */
+.widget-donor-list p {
+  margin-bottom: 0px;
+}
+.widget-donor-list ul {
+  padding: 0;
+  list-style: none;
+}
+.scroll-text {
+  height: 1.5em;
+  overflow: hidden;
+}
 /* State */
 /* Print */
 /* Media queries */

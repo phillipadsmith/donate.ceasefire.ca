@@ -1,8 +1,20 @@
 $(document).ready(function() {
+    // Input mask for credit cards
     $('input[name="card_number"]').payment('formatCardNumber');
 
+    // Enable Bootstrap popovers
     $('[rel="popover"]').popover();
 
+    // Get donor data and scroll it
+    $.getJSON("donors.json", function(data) {
+        var items = [];
+        var donors = data.donors;
+        $.each(data.donors, function() {
+            items.push("<li>" + this.first_name + ' ' + this.last_name + ' from ' + this.city + ', ' + this.province + "</li>");
+        });
+        $('.donors ul').append(items);
+    });
+    $('.donors').scrollbox();
 
     // control recurring vs. one-time contributions
     $('select.frequency').change((function() {

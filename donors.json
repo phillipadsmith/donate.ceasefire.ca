@@ -1,0 +1,18 @@
+{
+    "donors": [{
+        "first_name": "Steven",
+        "last_name": "Staples",
+        "province": "ON",
+        "city": "Ottawa"
+    }, {
+        "first_name": "Phillip",
+        "last_name": "Smith",
+        "province": "ON",
+        "city": "Toronto"
+    }, {
+        "first_name": "Kathleen",
+        "last_name": "Walsh",
+        "province": "ON",
+        "city": "Ottawa"
+    }]
+}

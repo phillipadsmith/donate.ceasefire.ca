@@ -136,6 +136,15 @@ a.btn:link, a.btn:hover, a.btn:visited {
     }
 }
 
+// Input field text zoom fix, http://www.456bereastreet.com/archive/201212/ios_webkit_browsers_and_auto-zooming_form_controls/
+@media only screen and (max-device-width:568px) {
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus {
+        font-size:16px;
+    }
+}
+
 @media 
 only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-resolution: 192dppx) { 

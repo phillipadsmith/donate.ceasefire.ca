@@ -112,6 +112,13 @@ a.btn:visited {
     overflow: auto;
   }
 }
+@media only screen and (max-device-width: 568px) {
+  input[type="text"]:focus,
+  textarea:focus,
+  select:focus {
+    font-size: 16px;
+  }
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dppx) {
   /* Retina-specific stuff here, put your CSS sprite stuff here for Retina */
   header h1 {

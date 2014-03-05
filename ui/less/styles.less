@@ -129,6 +129,13 @@ a.btn:link, a.btn:hover, a.btn:visited {
 
 /* Media queries */
 
+//Modal shift fix for Mozilla
+@media screen and (min--moz-device-pixel-ratio:0) { 
+    .modal-open {
+    overflow: auto;
+    }
+}
+
 @media 
 only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-resolution: 192dppx) { 

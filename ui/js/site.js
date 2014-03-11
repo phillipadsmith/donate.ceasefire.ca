@@ -25,18 +25,18 @@ $(document).ready(function() {
             $('input[name="send_me_gift"]').attr("checked", false);
             $('.sustaining').hide();
             amount = $('input[name="amount_1"]').val();
+            $('input[name="frequency"]').attr("value", 1);
         } else if ($('.sustaining').is(":hidden")) {
             $('.sustaining').show();
             $('.onetime').hide();
             amount = $('input[name="amount_r"]').val();
+            $('input[name="frequency"]').attr("value", 'r');
         }
     }));
     $('input[name="amount_r"]').blur((function() {
-        console.log('amount_r blur');
         show_widget_amount_and_frequncy();
     }));
     $('input[name="amount_1"]').blur((function() {
-        console.log('amount_1 blur');
         show_widget_amount_and_frequncy();
     }));
 

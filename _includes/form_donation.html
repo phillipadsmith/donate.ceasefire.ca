@@ -33,7 +33,6 @@
                                     <span class="input-group-addon">$</span>
                                     <input class="form-control" type="text" name="amount_r" value="" placeholder="Sustaining contribution">
                                     <span class="input-group-addon">.00</span>
-                                    <input class="form-control" type="hidden" name="frequency" value="r" id="freq_monthly">
                                 </div>
                             </div>
                             <div class="row">
@@ -54,7 +53,6 @@
                                 <input class="form-control" type="text" name="amount_1" value="" placeholder="One-time contribution">
                                 <span class="input-group-addon">.00</span>
                             </div>
-                            <input class="form-control" type="hidden" name="frequency" value="1" id="freq_one_time">
                         </div><!-- /.onetime -->
 
                         <div class="widget_amount_frequency" style="display:none;"> 
@@ -62,6 +60,7 @@
                             <p>You are committing $<span class="widget_amount"></span>&nbsp;/&nbsp;<span class="widget_frequency"></span>.</p>
                             </div>
                         </div>
+                        <input class="form-control" type="hidden" name="frequency" value="r" id="frequency">
                         </fieldset>
                         <fieldset id="personal_information">
                             <legend>

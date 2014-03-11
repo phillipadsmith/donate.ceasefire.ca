@@ -70,8 +70,6 @@ $(document).ready(function() {
         }
     }));
 
-    // override jquery validate plugin defaults
-    $.validator.setDefaults({});
     $("#payment_form").validate({
         highlight: function(element) {
             $(element).closest('.form-group').addClass('has-error');
@@ -88,7 +86,7 @@ $(document).ready(function() {
                 error.insertAfter(element);
             }
         },
-        debug: true,
+        //debug: true,
         success: "valid",
         messages: {
             first_name: "Please specify your first name",

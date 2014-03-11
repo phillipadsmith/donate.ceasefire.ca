@@ -10,7 +10,8 @@ Before deploying, the JavaScript and CSS should be minified.
 
 Form parameters should match those of the existing form, e.g.:
 
-** Existing form **
+**Existing form**
+
 frequency:1
 amount_1:5
 amount_r:
@@ -40,6 +41,7 @@ bill_postal_code:M5V 1T5
 bill_country:CA
 
 **New form**
+
 day_of_month=&amount_r=&amount_1=10&frequency=1&first_name=Phillip&last_name=Smith&email_addr=ps%40test.com&name_on_card=Phillip+Smith&card_number=4111+1111+1111+1111&cvd=&exp_month=01&exp_year=17&addr1=530+Adelaide+St+W&city=Toronto&province=ON&postal_code=M5V+1T5&country=CA&phone_number=&donor_recognition=Yes&frequency_paypal=monthly
 
 ### Public donor recognition

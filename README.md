@@ -4,7 +4,7 @@
 
 All of the necessary files for implementation should be taken from the `_site` directory of this project. Specifically, the `index.html` that contains the form itself, as well as the `/ui/` folder that contains the necessary CSS, images, and JavaScript.
 
-Before deploying, the JavaScript and CSS should be minified.
+Before deploying, the JavaScript and CSS should be minified. Also, the form action will need to be specified. 
 
 ### Form parameters
 

@@ -14,7 +14,6 @@ $(document).ready(function() {
         });
         $('.donors ul').append(items);
     });
-    //$('.donors').scrollbox();
 
     // control recurring vs. one-time contributions
     $('select.frequency').change((function() {

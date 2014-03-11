@@ -125,7 +125,7 @@ a.btn:link, a.btn:hover, a.btn:visited {
     }
 }
 
-/* Module: Scrolling list of donors */
+/* Module: List of donors */
 
 .widget-donor-list {
     p {
@@ -135,10 +135,35 @@ a.btn:link, a.btn:hover, a.btn:visited {
         padding: 0;
         list-style: none;
     }
+    li {
+      display: inline;
+      float:left;
+    }
+    li::after {
+        content: ", ";
+      white-space: pre;
+    }
+    li:last-child::before {
+      content: "and ";
+      white-space: pre;
+    }
+     li:last-child::after {
+      content: "";
+    }
+    ul + * {
+      clear: left;
+    }
 }
 .scroll-text {
     height: 1.5em;
     overflow: hidden;
+}
+
+/* Module: modals */
+
+.modal-content img {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* State */

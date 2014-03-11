@@ -1,9 +1,4 @@
         <form role="form" name="payment_form" id="payment_form">
-            <div class="widget_amount_frequency" style="display:none;"> 
-                <div class="alert alert-info">
-                <p>You are committing $<span class="widget_amount"></span>&nbsp;/&nbsp;<span class="widget_frequency"></span>.</p>
-                </div>
-            </div>
             <fieldset id="payment_method">
                 <legend>
                     <span class="step">1</span>Select payment method
@@ -24,10 +19,10 @@
                     <fieldset id="frequency">
                         <div class="form-group">
                             <select class="form-control frequency" name="day_of_month" required>
-                                <option value="1" selected>Monthly, on the 1st</option>
-                                <option value="15" >Monthly, on the 15th</option>
-                                <option value="TODOweekly">Weekly</option>
-                                <option value="onetime">One-time</option>
+                                <option value="1" data-text="month, on the 1st"selected>Monthly, on the 1st</option>
+                                <option value="15" data-text="month, on the 15th">Monthly, on the 15th</option>
+                                <option value="TODOweekly" data-text="every week">Weekly</option>
+                                <option value="onetime" data-text="one time">One-time</option>
                             </select>
                         </div>
 
@@ -61,6 +56,12 @@
                             </div>
                             <input class="form-control" type="hidden" name="frequency" value="1" id="freq_one_time">
                         </div><!-- /.onetime -->
+
+                        <div class="widget_amount_frequency" style="display:none;"> 
+                            <div class="alert alert-info">
+                            <p>You are committing $<span class="widget_amount"></span>&nbsp;/&nbsp;<span class="widget_frequency"></span>.</p>
+                            </div>
+                        </div>
                         </fieldset>
                         <fieldset id="personal_information">
                             <legend>
@@ -283,12 +284,13 @@
                             <a href="http://docs.google.com/viewer?url=https%3A%2F%2Fwww.ceasefire.ca%2Fdonate%2Fdonation_form.pdf" class="btn btn-lrg btn-success">Open & Print Form &raquo;</a>
                         </div>
                     </div>
+                <div class="widget-donor-list">
+                    <p>Look who just made a donation for peace! See anyone you know?</p>
+                    <div class="donors">
+                        <ul>
+                        </ul>
+                    </div>
+                    <br clear="all" />
+                </div>
                 </div><!-- /.tab-content -->
         </form>
-        <hr class="soften" />
-        <p>Ceasefire.ca is a project of The Rideau Institute, a public interest research organization, federally incorporated as a not-for-profit organization with Industry Canada under the Canada Corporations Act. Unfortunately, because of their advocacy work, donations to Ceasefire.ca or the Rideau Institute are not tax deductible.</p>
-        <p>Contact Ceasefire.ca at 613 565-9449 ext. 21 or <a href="mailto:operation@ceasefire.ca">by e-mail</a> 
-        </p>
-
-        <img src="ui/img/img_beanstream_secure_light.gif" 
-        border="0" alt="Secure Electronic Payment Processing" title="Secure Electronic Payment Processing" />

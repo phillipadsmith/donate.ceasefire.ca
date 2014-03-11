@@ -106,7 +106,7 @@ a.btn:visited {
 .jumbotron .container {
   background: rgba(255, 255, 255, 0.7);
 }
-/* Module: Scrolling list of donors */
+/* Module: List of donors */
 .widget-donor-list p {
   margin-bottom: 0px;
 }
@@ -114,9 +114,32 @@ a.btn:visited {
   padding: 0;
   list-style: none;
 }
+.widget-donor-list li {
+  display: inline;
+  float: left;
+}
+.widget-donor-list li::after {
+  content: ", ";
+  white-space: pre;
+}
+.widget-donor-list li:last-child::before {
+  content: "and ";
+  white-space: pre;
+}
+.widget-donor-list li:last-child::after {
+  content: "";
+}
+.widget-donor-list ul + * {
+  clear: left;
+}
 .scroll-text {
   height: 1.5em;
   overflow: hidden;
+}
+/* Module: modals */
+.modal-content img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 /* State */
 /* Print */

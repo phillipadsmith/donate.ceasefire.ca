@@ -10,11 +10,11 @@ $(document).ready(function() {
         var items = [];
         var donors = data.donors;
         $.each(data.donors, function() {
-            items.push("<li>" + this.first_name + ' ' + this.last_name + ' from ' + this.city + ', ' + this.province + "</li>");
+            items.push("<li>" + this.first_name + ' ' + this.last_name + ' (' + this.city + ', ' + this.province + ")</li>");
         });
         $('.donors ul').append(items);
     });
-    $('.donors').scrollbox();
+    //$('.donors').scrollbox();
 
     // control recurring vs. one-time contributions
     $('select.frequency').change((function() {
@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     function show_widget_amount_and_frequncy() {
         var amount;
-        var frequency_text = $("select.frequency option:selected").text();
+        var frequency_text = $("select.frequency option:selected").attr("data-text");
         var frequency = $("select.frequency option:selected").val();
         if (frequency === 'onetime') {
             amount = $('input[name="amount_1"]').val();

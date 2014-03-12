@@ -33,7 +33,7 @@ $(document).ready(function() {
         frequency = 'one time.';
     }
 
-    if (url.attr('path') === '/success.html') {
+    if (url.attr('path').search(/success/)) {
         $('dd.trn-name').text(full_name);
         $('dd.trn-email').text(email);
         $('dd.trn-details span.trn-amount').text(amount);

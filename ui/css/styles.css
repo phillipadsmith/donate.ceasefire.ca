@@ -97,13 +97,13 @@ a.btn:visited {
   color: white;
 }
 /* Module: Jumbotron */
-.jumbotron {
+body.front .jumbotron {
   background: url('../img/ceasefire-volunteers.JPG') no-repeat top center;
   background-size: cover;
   margin-bottom: 10px;
   min-height: 180px;
 }
-.jumbotron .container {
+body.front .jumbotron .container {
   background: rgba(255, 255, 255, 0.7);
 }
 /* Module: List of donors */
@@ -138,6 +138,11 @@ a.btn:visited {
 }
 /* Module: modals */
 .modal-content img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* Module: success.html */
+body.success img {
   width: 100%;
   margin-bottom: 20px;
 }

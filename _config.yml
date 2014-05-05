@@ -1,3 +1,4 @@
 name: donate.ceasefire.ca 
 markdown: redcarpet
 pygments: true
+asset_path: http://phillipadsmith.github.io/donate.ceasefire.ca/

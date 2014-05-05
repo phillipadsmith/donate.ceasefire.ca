@@ -33,6 +33,11 @@
                 background: #38465D !important;
             } 
             /* Responsive styles */
+            /* @media only screen and (max-width: 600px) {
+              table[class="container"] .block-grid td {
+                width: 100% !important;
+              }
+            } */
             @media only screen and (max-width: 599px) {
             }
             @media only screen and (max-width: 500px) {
@@ -67,13 +72,18 @@
                                             <td width="20"><img src="ui/img/spacer.gif" width="20" /></td>
                                         </tr>
                                     </table>
-
-                                    <table class="block-grid two-up" style="background:#000;color:#fff;">
+                                    <table width="100%" style="background:#000;color:#fff;">
                                         <tr>
                                             <td>
-                                                <a href="http://ceasefire.ca"><img alt="Ceasefire.ca" src="ui/img/email_header_logo.gif" /></a>
-                                                </td><td class="hide-for-small"> <!-- Make sure the tags are directly next to each other -->
-                                                <img alt="25,000 strong" src="ui/img/email_header_tagline.gif" /> 
+                                            <table class="block-grid two-up" style="background:#000;color:#fff;">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://ceasefire.ca"><img alt="Ceasefire.ca" src="ui/img/email_header_logo.gif" /></a>
+                                                        </td><td class="hide-for-small"> <!-- Make sure the tags are directly next to each other -->
+                                                        <img alt="25,000 strong" src="ui/img/email_header_tagline.gif" /> 
+                                                    </td>
+                                                </tr>
+                                            </table>
                                             </td>
                                         </tr>
                                     </table>
@@ -110,7 +120,7 @@
                                                 <table class="button facebook radius">
                                                     <tr>
                                                         <td style="">
-                                                            <a href="#">Recommend on Facebook</a>
+                                                            <a href="#">Share on Facebook</a>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -123,7 +133,6 @@
                                                     </tr>
                                                 </table>
                                                 <br />
-
                                                 <table width="100%" class="center hide-for-small" style="border: 1px solid black;">
                                                     <tr>
                                                         <td style="text-align:center;background:#F28900;color:#fff;font-weight:bold;font-size:16px;padding:6px 0 4px 0;border-bottom: 1px solid black;"><i>YES!</i> I ENDORSE THIS CAMPAIGN</td>
@@ -197,10 +206,10 @@ Offer expires November 30, 2013.</p>
                                                                     <td width="10"><img src="ui/img/spacer.gif" width="20" /></td>
                                                                 </tr>
                                                             </table>
-
                                                         </td>
                                                     </tr>
                                                 </table>
+                                                <p class="show-for-small">To mail in your contribution, please view this message on your desktop computer to print the attached mail-in form.</p>
                                                 <br />
 
                                             </td>
